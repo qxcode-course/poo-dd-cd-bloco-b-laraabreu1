@@ -17,6 +17,7 @@ expanded:
 - poo@bloco_b-modificadores-de-acesso
 - poo@bloco_b-agregação-simples
 tasks:
+  poo@chinela: '{rate:100, alone:10, study:30}'
   poo@camisa: '{rate:100, iagen:sim_para_identificar_erros, alone:8, study:55}'
   poo@roupa: '{rate:100, iagen:sim_para_identificar_erros, alone:9, study:40}'
   poo@relogio: '{rate:100, human:sim_para_tirar_duvidas, iagen:sim_para_identificar_erros,
@@ -28,4 +29,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@relogio
+selected: poo@chinela

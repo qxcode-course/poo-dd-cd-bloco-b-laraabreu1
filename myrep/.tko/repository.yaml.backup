@@ -15,7 +15,12 @@ sources:
 expanded:
 - poo@campanha-principal
 - poo@bloco_b-modificadores-de-acesso
-tasks: {}
+- poo@bloco_b-agregação-simples
+tasks:
+  poo@camisa: '{rate:100, iagen:sim_para_identificar_erros, alone:8, study:55}'
+  poo@roupa: '{rate:100, iagen:sim_para_identificar_erros, alone:9, study:40}'
+  poo@relogio: '{rate:100, human:sim_para_tirar_duvidas, iagen:sim_para_identificar_erros,
+    alone:5, study:60}'
 flags:
   quests: 0
   tracks: 0
@@ -23,4 +28,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@roupa
+selected: poo@relogio

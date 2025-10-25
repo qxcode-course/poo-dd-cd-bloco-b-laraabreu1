@@ -8,3 +8,39 @@
 2025-10-24 21:21:05, MOVE, v:1, k:poo@camisa, mode:PICK
 2025-10-24 21:21:06, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:22
 2025-10-24 21:23:04, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:22
+2025-10-24 21:26:30, MOVE, v:1, k:poo@camisa, mode:BACK
+2025-10-24 21:27:37, SELF, v:1, k:poo@camisa, rate:100, iagen:sim_para_identificar_erros, alone:8, study:55
+2025-10-24 21:28:25, MOVE, v:1, k:poo@roupa, mode:DOWN
+2025-10-24 21:28:27, MOVE, v:1, k:poo@roupa, mode:PICK
+2025-10-24 21:29:40, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:22
+2025-10-24 21:29:46, EXEC, v:1, k:poo@roupa, mode:FREE
+2025-10-24 21:48:57, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:29
+2025-10-24 21:49:00, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0
+2025-10-24 21:51:03, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:29
+2025-10-24 21:51:31, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:29
+2025-10-24 21:54:54, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:29
+2025-10-24 21:55:47, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100, size:32
+2025-10-24 21:58:50, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100
+2025-10-24 21:58:53, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-24 21:59:51, SELF, v:1, k:poo@roupa, rate:100, iagen:sim_para_identificar_erros, alone:9, study:40
+2025-10-24 22:22:10, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-24 22:22:13, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:58
+2025-10-24 22:22:18, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0
+2025-10-24 22:29:20, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:61
+2025-10-24 22:32:09, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:75
+2025-10-24 22:32:31, EXEC, v:1, k:poo@relogio, mode:FULL, rate:7, size:76
+2025-10-24 22:32:32, EXEC, v:1, k:poo@relogio, mode:FULL, rate:7
+2025-10-24 22:32:33, EXEC, v:1, k:poo@relogio, mode:FULL, rate:7
+2025-10-24 22:33:54, EXEC, v:1, k:poo@relogio, mode:FULL, rate:7, size:76
+2025-10-24 22:33:56, EXEC, v:1, k:poo@relogio, mode:FULL, rate:7
+2025-10-24 22:34:46, EXEC, v:1, k:poo@relogio, mode:FULL, rate:53, size:76
+2025-10-24 22:36:32, EXEC, v:1, k:poo@relogio, mode:FULL, rate:53
+2025-10-24 22:40:08, EXEC, v:1, k:poo@relogio, mode:FULL, rate:53, size:73
+2025-10-24 22:40:55, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:67
+2025-10-24 22:41:34, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:65
+2025-10-24 22:41:46, EXEC, v:1, k:poo@relogio, mode:FULL, rate:53, size:73
+2025-10-24 22:44:02, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100, size:69
+2025-10-24 22:47:56, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100, size:67
+2025-10-24 22:52:25, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100, size:67
+2025-10-24 22:53:22, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-24 22:54:34, SELF, v:1, k:poo@relogio, rate:100, human:sim_para_tirar_duvidas, iagen:sim_para_identificar_erros, alone:5, study:60

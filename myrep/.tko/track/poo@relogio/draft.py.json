@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-06_16-54-10",
+            "content": "# c\u00f3digo do Tempo\n# 1. usar o __ no come\u00e7o pra definir private\n# 2. criar um get_algo para leitura e retornar o valor\n# 3. criar um set_algo que recebe um valor\n# 4. parametros default utilizados quando o valor n\u00e3o vem\n# 5. parametros nomeados quando quero um valor especifico\n\nclass Tempo:\n    def __init__(self, hora: int = 0, min: int = 0):\n        self.__h = 0\n        self.set_hora(hora)\n        self.__m = min\n        self.__s = 0\n\n    def set_hora(self, valor: int) -> None: # escrita\n        if valor > 11 or valor < 0:\n            print(\"hora errada\")\n            return\n        self.__h = valor\n\n    def get_hora(self) -> int: # leitura\n        return self.__h\n\n    def __str__(self):\n        return f\"{self.__h}:{self.__m}:{self.__s}\"\n\nagora = Tempo(min=55, hora=9)\nprint(agora)",
+            "lines": "28"
+        }
+    ]
+}

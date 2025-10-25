@@ -1,0 +1,10 @@
+2025-10-24 20:52:09, MOVE, v:1, k:poo@camisa, mode:DOWN
+2025-10-24 21:10:41, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-24 21:10:45, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:100, size:20
+2025-10-24 21:10:48, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:100
+2025-10-24 21:10:50, EXEC, v:1, k:poo@camisa, mode:FREE
+2025-10-24 21:14:19, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-24 21:17:04, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-24 21:21:05, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-24 21:21:06, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:22
+2025-10-24 21:23:04, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:22

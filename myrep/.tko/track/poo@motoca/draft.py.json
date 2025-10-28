@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-25_15-51-04",
+            "content": "@@ -565,16 +565,38 @@\n _str%7D%22%0A%0A\n+    # Parte 1: Inserir\n %0A    def\n@@ -781,16 +781,38 @@\n n True%0A%0A\n+    # Parte 2: Remover\n %0A    def\n@@ -1008,16 +1008,44 @@\n emoved%0A%0A\n+    # Parte 3: Comprar Tempo\n %0A    def\n@@ -1090,32 +1090,54 @@\n f.time += time%0A%0A\n+    # Parte 4: Dirigir\n %0A    def drive(s\n@@ -1606,16 +1606,38 @@\n = time%0A%0A\n+    # Parte 5: Buzinar\n %0A    def\n@@ -1701,1682 +1701,340 @@\n %22%0A%0A%0A\n-def main():%0A    moto = Motoca()%0A%0A    while True:%0A        try:%0A            line = input()%0A        except EOFError:%0A            break  # sai se n%C3%A3o houver mais entrada%0A%0A        if line.strip() == %22%22:%0A            continue%0A%0A        args = line.split()%0A        cmd = args%5B0%5D%0A%0A        if cmd == %22$show%22:%0A            print(moto)%0A        elif cmd == %22$init%22:%0A            moto = Motoca()%0A        elif cmd == %22$enter%22:%0A            if len(args) %3C 3:%0A                print(%22fail: missing arguments%22)%0A                continue%0A            name = args%5B1%5D%0A            try:%0A                age = int(args%5B2%5D)%0A            except ValueError:%0A                print(%22fail: invalid age%22)%0A                continue%0A            pessoa = Pessoa(name, age)%0A            moto.inserir(pessoa)%0A        elif cmd == %22$leave%22:%0A            moto.remover()%0A        elif cmd == %22$buy%22:%0A            if len(args) %3C 2:%0A                print(%22fail: missing minutes%22)%0A                continue%0A            try:%0A                minutes = int(args%5B1%5D)%0A            except ValueError:%0A                print(%22fail: invalid minutes%22)%0A                continue%0A            moto.buyTime(minutes)%0A        elif cmd == %22$drive%22:%0A            if len(args) %3C 2:%0A                print(%22fail: missing minutes%22)%0A                continue%0A            try:%0A                minutes = int(args%5B1%5D)%0A            except ValueError:%0A                print(%22fail: invalid minutes%22)%0A                continue%0A            moto.drive(minutes)%0A        elif cmd == %22$honk%22:%0A            print(moto.honk())%0A        elif cmd == %22$end%22:%0A            break%0A        else:%0A            print(f%22fail: unknown command '%7Bcmd%7D'%22)%0A%0A%0Aif __name__ == %22__main__%22:%0A    main()%0A\n+# --------- Comandos para testar ---------%0Aif __name__ == %22__main__%22:%0A    moto = Motoca()%0A    print(moto)%0A%0A    # Testes%0A    p1 = Pessoa(%22marcos%22, 4)%0A    moto.inserir(p1)%0A    print(moto)%0A%0A    moto.buyTime(10)%0A    moto.drive(5)%0A    print(moto.honk())%0A    print(moto)%0A%0A    moto.drive(6)  # excede o tempo%0A    moto.remover()%0A    print(moto)\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-10-25_15-53-44",
+            "content": "@@ -565,16 +565,17 @@\n _str%7D%22%0A%0A\n+%0A\n     def \n@@ -759,16 +759,17 @@\n n True%0A%0A\n+%0A\n     def \n@@ -964,16 +964,17 @@\n emoved%0A%0A\n+%0A\n     def \n@@ -1018,32 +1018,33 @@\n f.time += time%0A%0A\n+%0A\n     def drive(se\n@@ -1335,32 +1335,33 @@\n          return%0A\n+%0A\n         if time \n@@ -1508,24 +1508,25 @@\n me -= time%0A%0A\n+%0A\n     def honk\n@@ -1613,16 +1613,17 @@\n otoca()%0A\n+%0A\n     whil\n@@ -1630,16 +1630,33 @@\n e True:%0A\n+        try:%0A    \n         \n@@ -1682,143 +1682,1403 @@\n     \n-print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split(%22 %22)%0A        if args%5B0%5D == %22end%22:%0A            break%0A        if args%5B0%5D\n+except EOFError:%0A            break  # sai se n%C3%A3o houver mais entrada%0A%0A        if line.strip() == %22%22:%0A            continue%0A%0A        args = line.split()%0A        cmd = args%5B0%5D%0A%0A        if cmd == %22$show%22:%0A            print(moto)%0A        elif cmd == %22$init%22:%0A            moto = Motoca()%0A        elif cmd == %22$enter%22:%0A            if len(args) %3C 3:%0A                print(%22fail: missing arguments%22)%0A                continue%0A            name = args%5B1%5D%0A            try:%0A                age = int(args%5B2%5D)%0A            except ValueError:%0A                print(%22fail: invalid age%22)%0A                continue%0A            pessoa = Pessoa(name, age)%0A            moto.inserir(pessoa)%0A        elif cmd == %22$leave%22:%0A            moto.remover()%0A        elif cmd == %22$buy%22:%0A            if len(args) %3C 2:%0A                print(%22fail: missing minutes%22)%0A                continue%0A            try:%0A                minutes = int(args%5B1%5D)%0A            except ValueError:%0A                print(%22fail: invalid minutes%22)%0A                continue%0A            moto.buyTime(minutes)%0A        elif cmd == %22$drive%22:%0A            if len(args) %3C 2:%0A                print(%22fail: missing minutes%22)%0A                continue%0A            try:%0A                minutes = int(args%5B1%5D)%0A            except ValueError:%0A                print(%22fail: invalid minutes%22)%0A                continue%0A            moto.drive(minutes)%0A        elif cmd\n  == %22$\n-s\n ho\n-w\n+nk\n %22:%0A \n@@ -3090,34 +3090,87 @@\n       print(moto\n+.honk()\n )%0A\n+        elif cmd == %22$end%22:%0A            break%0A\n         else:%0A  \n@@ -3212,14 +3212,55 @@\n mand\n-%22)%0A%0A\n+ '%7Bcmd%7D'%22)%0A%0A%0Aif __name__ == %22__main__%22:%0A    \n main()\n+%0A\n",
+            "lines": "132"
+        },
+        {
+            "label": "2025-10-27_21-19-49",
+            "content": "@@ -1598,21 +1598,24 @@\n  moto = \n-None%0A\n+Motoca()\n %0A    whi\n@@ -1684,16 +1684,27 @@\n     args\n+: list%5Bstr%5D\n  = line.\n@@ -1714,17 +1714,16 @@\n it(%22 %22)%0A\n-%0A\n         \n@@ -1761,25 +1761,24 @@\n   break%0A\n-%0A\n         \n elif arg\n@@ -1761,34 +1761,32 @@\n   break%0A        \n-el\n if args%5B0%5D == %22i\n@@ -1788,107 +1788,9 @@\n == %22\n-init%22:%0A            power = int(args%5B1%5D)%0A            moto = Motoca(power)%0A%0A        elif args%5B0%5D == %22\n+$\n show\n@@ -1816,17 +1816,16 @@\n t(moto)%0A\n-%0A\n         \n@@ -1830,479 +1830,53 @@\n   el\n-if args%5B0%5D == %22in%22:%0A            name = args%5B1%5D%0A            age = int(args%5B2%5D)%0A            person = Pessoa(name, age)%0A            moto.inserir(person)%0A%0A        elif args%5B0%5D == %22out%22:%0A            moto.remover()%0A%0A        elif args%5B0%5D == %22buy%22:%0A            moto.buyTime(int(args%5B1%5D))%0A%0A        elif args%5B0%5D == %22drive%22:%0A            moto.drive(int(args%5B1%5D))%0A%0A        elif args%5B0%5D == %22honk%22:%0A            print(moto.honk())%0A%0A        else:%0A            print(%22fail:\n+se:%0A            print(f%22fail: unknown\n  com\n+m\n and\n-o invalido\n %22)%0A%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-10-27_21-28-25",
+            "content": "@@ -1602,65 +1602,12 @@\n o = \n-Motoca()  # come%C3%A7a com pot%C3%AAncia 1, sem tempo e sem pessoa\n+None\n %0A%0A  \n@@ -1778,12 +1778,12 @@\n == %22\n-show\n+init\n %22:%0A \n@@ -1794,25 +1794,67 @@\n        p\n-rint(moto\n+ower = int(args%5B1%5D)%0A            moto = Motoca(power\n )%0A%0A     \n@@ -1865,36 +1865,36 @@\n lif args%5B0%5D == %22\n-init\n+show\n %22:%0A            #\n@@ -1896,54 +1896,18 @@\n     \n-# reinicia a motoca%0A            moto = Motoca(\n+print(moto\n )%0A%0A \n@@ -1934,13 +1934,10 @@\n == %22\n-enter\n+in\n %22:%0A \n@@ -2095,13 +2095,11 @@\n == %22\n-leave\n+out\n %22:%0A \n@@ -2390,15 +2390,14 @@\n lido%22)%0A%0A\n-%0A\n main()\n",
+            "lines": "103"
+        },
+        {
+            "label": "2025-10-27_21-52-35",
+            "content": "@@ -1598,20 +1598,73 @@\n  moto = \n-None\n+Motoca()  # come%C3%A7a com pot%C3%AAncia 1, sem tempo e sem pessoa\n %0A%0A    wh\n@@ -1827,20 +1827,20 @@\n %5B0%5D == %22\n-init\n+show\n %22:%0A     \n@@ -1851,59 +1851,17 @@\n    p\n-ower = int(args%5B1%5D)%0A            moto = Motoca(power\n+rint(moto\n )%0A%0A \n@@ -1876,36 +1876,36 @@\n lif args%5B0%5D == %22\n-show\n+init\n %22:%0A            p\n@@ -1899,34 +1899,70 @@\n             \n-print(moto\n+# reinicia a motoca%0A            moto = Motoca(\n )%0A%0A        e\n@@ -1977,18 +1977,21 @@\n %5B0%5D == %22\n-in\n+enter\n %22:%0A     \n@@ -2145,11 +2145,13 @@\n == %22\n-out\n+leave\n %22:%0A \n@@ -2442,14 +2442,15 @@\n lido%22)%0A%0A\n+%0A\n main()\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-10-27_21-52-42",
+            "content": "@@ -1797,56 +1797,16 @@\n     \n-if len(args) %3E 1:%0A                moto = Motoca(\n+power = \n int(\n@@ -1817,32 +1817,9 @@\n %5B1%5D)\n-)\n %0A\n-            else:%0A    \n     \n@@ -1840,16 +1840,21 @@\n  Motoca(\n+power\n )%0A%0A     \n",
+            "lines": "103"
+        },
+        {
+            "label": "2025-10-27_21-56-16",
+            "content": "@@ -447,12 +447,12 @@\n r = \n-f%22(%7B\n+str(\n self\n@@ -462,11 +462,9 @@\n rson\n-%7D)%22\n+)\n  if \n@@ -573,20 +573,22 @@\n     def \n-ente\n+inseri\n r(self, \n@@ -766,19 +766,23 @@\n     def \n-out\n+remover\n (self):%0A\n@@ -973,16 +973,20 @@\n  def buy\n+Time\n (self, t\n@@ -1272,17 +1272,17 @@\n lf.time \n-=\n+%3C\n = 0:%0A   \n@@ -1599,24 +1599,25 @@\n moto = None%0A\n+%0A\n     while Tr\n@@ -1695,16 +1695,19 @@\n e.split(\n+%22 %22\n )%0A%0A     \n@@ -1749,32 +1749,34 @@\n  break%0A%0A        \n+el\n if args%5B0%5D == %22i\n@@ -1777,24 +1777,58 @@\n  == %22init%22:%0A\n+            if len(args) %3E 1:%0A    \n             \n@@ -1867,24 +1867,15 @@\n     \n-elif moto is Non\n+    els\n e:%0A \n@@ -1889,65 +1889,27 @@\n     \n+  \n-print(%22fail: moto nao inicializada%22)%0A            continue\n+  moto = Motoca()\n %0A%0A  \n@@ -1962,16 +1962,17 @@\n t(moto)%0A\n+%0A\n         \n@@ -1988,21 +1988,18 @@\n %5B0%5D == %22\n-enter\n+in\n %22:%0A     \n@@ -2111,12 +2111,14 @@\n oto.\n-ente\n+inseri\n r(pe\n@@ -2123,16 +2123,17 @@\n person)%0A\n+%0A\n         \n@@ -2176,14 +2176,19 @@\n oto.\n-out\n+remover\n ()%0A\n+%0A\n     \n@@ -2234,16 +2234,20 @@\n moto.buy\n+Time\n (int(arg\n@@ -2245,32 +2245,33 @@\n e(int(args%5B1%5D))%0A\n+%0A\n         elif arg\n@@ -2316,32 +2316,33 @@\n e(int(args%5B1%5D))%0A\n+%0A\n         elif arg\n@@ -2388,16 +2388,17 @@\n honk())%0A\n+%0A\n         \n@@ -2452,12 +2452,10 @@\n %22)%0A%0A\n-%0A\n main()\n-%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2025-10-27_22-20-24",
+            "content": "@@ -1051,96 +1051,8 @@\n t):%0A\n-        if self.time == 0:%0A            print(%22fail: buy time first%22)%0A            return%0A\n     \n@@ -1071,32 +1071,32 @@\n person is None:%0A\n+\n             prin\n@@ -1235,32 +1235,120 @@\n          return%0A\n+        if self.time == 0:%0A            print(%22fail: buy time first%22)%0A            return%0A\n         if time \n@@ -1460,32 +1460,32 @@\n 0%0A        else:%0A\n+\n             self\n@@ -1499,17 +1499,16 @@\n = time%0A%0A\n-%0A\n     def \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-10-27_22-26-49",
+            "content": "@@ -513,17 +513,16 @@\n f%22power:\n- \n %7Bself.po\n@@ -532,17 +532,16 @@\n %7D, time:\n- \n %7Bself.ti\n@@ -552,17 +552,16 @@\n  person:\n- \n %7Bperson_\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-10-27_22-27-54",
+            "content": "@@ -513,16 +513,17 @@\n f%22power:\n+ \n %7Bself.po\n@@ -533,16 +533,17 @@\n %7D, time:\n+ \n %7Bself.ti\n@@ -554,16 +554,17 @@\n  person:\n+ \n %7Bperson_\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-10-27_22-28-07",
+            "content": "@@ -1595,16 +1595,12 @@\n o = \n-Motoca()\n+None\n %0A   \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-10-27_22-32-40",
+            "content": "@@ -487,15 +487,13 @@\n se %22\n-(\n empty\n-)\n %22%0A  \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-10-27_22-33-35",
+            "content": "@@ -2154,21 +2154,19 @@\n %5B0%5D == %22\n-leave\n+out\n %22:%0A     \n@@ -2181,13 +2181,11 @@\n oto.\n-leave\n+out\n ()%0A \n@@ -2444,12 +2444,13 @@\n o%22)%0A%0A%0Amain()\n+%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-10-27_22-49-22",
+            "content": "@@ -768,21 +768,19 @@\n     def \n-leave\n+out\n (self):%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-10-27_22-49-50",
+            "content": "@@ -942,31 +942,8 @@\n one%0A\n-        print(removed)%0A\n     \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-10-27_22-51-01",
+            "content": "class Pessoa:\n    def __init__(self, name: str, age: int):\n        self.__name = name\n        self.__age = age\n\n    def getName(self):\n        return self.__name\n\n    def getAge(self):\n        return self.__age\n\n    def __str__(self):\n        return f\"{self.__name}:{self.__age}\"\n\n\nclass Motoca:\n    def __init__(self, power=1):\n        self.power = power\n        self.time = 0\n        self.person = None\n\n    def __str__(self):\n        person_str = f\"({self.person})\" if self.person else \"(empty)\"\n        return f\"power:{self.power}, time:{self.time}, person:{person_str}\"\n\n    def enter(self, person: Pessoa):\n        if self.person is not None:\n            print(\"fail: busy motorcycle\")\n            return False\n        self.person = person\n        return True\n\n    def leave(self):\n        if self.person is None:\n            print(\"fail: empty motorcycle\")\n            return None\n        removed = self.person\n        self.person = None\n        print(removed)\n        return removed\n\n    def buy(self, time: int):\n        self.time += time\n\n    def drive(self, time: int):\n        if self.time == 0:\n            print(\"fail: buy time first\")\n            return\n        if self.person is None:\n            print(\"fail: empty motorcycle\")\n            return\n        if self.person.getAge() > 10:\n            print(\"fail: too old to drive\")\n            return\n        if time > self.time:\n            print(f\"fail: time finished after {self.time} minutes\")\n            self.time = 0\n        else:\n            self.time -= time\n\n\n    def honk(self):\n        return \"P\" + (\"e\" * self.power) + \"m\"\n\n\ndef main():\n    moto = Motoca()\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n\n        if args[0] == \"init\":\n            moto = Motoca(int(args[1]))\n        elif moto is None:\n            print(\"fail: moto nao inicializada\")\n            continue\n\n        elif args[0] == \"show\":\n            print(moto)\n        elif args[0] == \"enter\":\n            name = args[1]\n            age = int(args[2])\n            person = Pessoa(name, age)\n            moto.enter(person)\n        elif args[0] == \"leave\":\n            moto.leave()\n        elif args[0] == \"buy\":\n            moto.buy(int(args[1]))\n        elif args[0] == \"drive\":\n            moto.drive(int(args[1]))\n        elif args[0] == \"honk\":\n            print(moto.honk())\n        else:\n            print(\"fail: comando invalido\")\n\n\nmain()",
+            "lines": "101"
+        }
+    ]
+}

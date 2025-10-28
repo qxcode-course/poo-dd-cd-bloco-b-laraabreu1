@@ -4,3 +4,10 @@
 2025-10-25 14:49:21, MOVE, v:1, k:poo@notebook, mode:BACK
 2025-10-25 14:49:23, MOVE, v:1, k:poo@notebook, mode:PICK
 2025-10-25 14:49:24, EXEC, v:1, k:poo@notebook, mode:LOCK, rate:0
+2025-10-25 15:04:38, MOVE, v:1, k:poo@notebook, mode:BACK
+2025-10-25 15:04:45, MOVE, v:1, k:poo@motoca, mode:DOWN
+2025-10-25 15:51:03, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-25 15:51:04, EXEC, v:1, k:poo@motoca, mode:FREE, size:87
+2025-10-25 15:51:45, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0
+2025-10-25 15:53:45, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:132
+2025-10-25 15:53:49, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0

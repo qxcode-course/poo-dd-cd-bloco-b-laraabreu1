@@ -2,13 +2,17 @@ version: '0.2'
 sources:
 - database: local
   link: ''
+  type: local
+  branch: master
   cache_path: ''
   cache_timestamp: ''
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+  type: remote
+  branch: master
   cache_path: C:\Users\Lara Abreu\Desktop\programaçao\bloco b\poo-dd-cd-bloco-b-laraabreu1\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-27 21:14:00'
+  cache_timestamp: '2025-10-28 09:27:12'
   filters:
   - acesso
   - simples
@@ -22,6 +26,8 @@ tasks:
   poo@relogio: '{rate:100, human:sim_para_tirar_duvidas, iagen:sim_para_identificar_erros,
     alone:5, study:60}'
   poo@motoca: '{rate:100, iagen:sim_para_corrigir_erros, guide:sim, alone:6, study:60}'
+  poo@grafite: '{rate:90}'
+  poo@motouber: '{rate:100, iagen:sim, guide:sim, alone:5, study:60}'
 flags:
   quests: 0
   tracks: 0

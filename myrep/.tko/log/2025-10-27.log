@@ -17,3 +17,13 @@
 2025-10-27 22:51:14, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100
 2025-10-27 22:51:19, MOVE, v:1, k:poo@motoca, mode:BACK
 2025-10-27 22:52:05, SELF, v:1, k:poo@motoca, rate:100, iagen:sim_para_corrigir_erros, guide:sim, alone:6, study:60
+2025-10-27 23:14:42, MOVE, v:1, k:poo@motouber, mode:DOWN
+2025-10-27 23:14:55, MOVE, v:1, k:poo@tamagotchi, mode:DOWN
+2025-10-27 23:19:38, MOVE, v:1, k:poo@grafite, mode:DOWN
+2025-10-27 23:19:39, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-27 23:19:48, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-27 23:19:49, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-27 23:20:05, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-27 23:20:23, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-27 23:20:24, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:0
+2025-10-27 23:20:30, MOVE, v:1, k:poo@grafite, mode:BACK
